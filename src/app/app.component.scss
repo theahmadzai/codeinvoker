@@ -1,0 +1,23 @@
+ul{
+  width:50%;
+  background:#efefef;
+  list-style: none;
+  padding:0.5rem;
+  margin: 0 auto;
+  li{
+    background:#fff;
+    margin:1rem;
+    padding:1rem;
+    cursor: pointer;
+    &:hover{
+      background:#333;
+      color:#eee;
+    }
+    b{
+      background:#000;
+      color:#fff;
+      padding:0 2rem;
+      font-size:2rem;
+    }
+  }
+}
