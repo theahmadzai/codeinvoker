@@ -1,40 +1,24 @@
-.posts{
+.posts {
   width:50%;
   margin:2rem auto;
 }
 
-.post{
+.post {
   display:flex;
+  flex-direction:column;
   margin-bottom:1.5rem;
   padding:1rem;
   background:#f9f9f9;
   line-height:1.5rem;
   border:1px solid #eee;
   transition:all 500ms linear;
-  &:hover{
-    cursor:pointer;
-    flex-direction: column;
-    padding-bottom:5rem;
-    background:#f1f1f1;
-    h3{
-      margin:2rem 0;
-    }
-    p{
-      background:#fff;
-      padding:1rem;
-    }
-  }
 }
 
-h3{
-  align-self:center;
-  padding-left:1rem;
-  padding-right:2rem;
-  font-size:3rem;
-  color:#999;
+h2 {
+  padding:1rem 0;
+  font-weight:300;
 }
 
-p{
-  color:#333;
+p {
   text-align:justify;
 }

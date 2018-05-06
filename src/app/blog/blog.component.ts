@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Post } from '../core/models/post.model';
-import { POSTS } from '../posts-mock';
+import { PostService } from '../core/services/post.service';
 
 @Component({
   selector: 'app-blog',
@@ -12,10 +12,17 @@ import { POSTS } from '../posts-mock';
 export class BlogComponent implements OnInit {
   posts: Post[];
 
-  constructor() {
-    this.posts = POSTS;
-  }
+  constructor(
+    private postService: PostService
+  ) { }
 
   ngOnInit() {
+    this.getPosts();
+  }
+
+  getPosts(): void {
+    this.postService.getPosts().subscribe((posts) => {
+      this.posts = posts;
+    });
   }
 }
